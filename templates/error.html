@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="title-container">
+        <h1 class="display-4">ERROR!</h1>
+        <p class="lead">An error occured when trying to solve the puzzle.</p>
+        <hr class="my-4">
+        <p>{{error_string}}</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="title-container">
+                <div class="row">
+                    <a class="btn btn-primary btn-lg btn-block" href="/solver" role="button">Go back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+{% endblock %}

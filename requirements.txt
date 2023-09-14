@@ -1,0 +1,4 @@
+numpy 
+Flask
+csv
+Flask-session 

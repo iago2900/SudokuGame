@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container-fluid content">
+        <a class="btn btn-primary btn-lg btn-block fixed-top col-md-1" style="margin: 10px;" href="/" role="button">Home</a>
+            {% block content %}
+            {% endblock %}
+    </div>
+    <footer class="fixed-bottom">
+        <p>&copy; 2023 Sudoku App</p>
+    </footer> 
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="title-container">
+        <h1 class="display-4">Sudoku Solver</h1>
+        <p class="lead">Here you can solve all the sudoku puzzles you want!</p>
+        <hr class="my-4">
+        <p>Here is the puzzle solved.</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="title-container">
+                <div class="col-md-offset-3">
+                    <form class="center">
+                        <table id="grid" class="center">
+                            {% for i in range(9) %}
+                            <tr>
+                                {% for j in range(9) %}
+                                    {% if final[i,j] == 0 %}
+                                    <td><input id="cell-{{ i*9 + j }}"  type="number"></td>
+                                    {% else %}
+                                    <td><input id="cell-{{ i*9 + j }}"  type="number" value="{{ final[i,j] }}" disabled></input></td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                            {% endfor %} 
+                        </table> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+{% endblock %}

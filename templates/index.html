@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="title-container">
+        <h1 class="display-4">Welcome to Sudoku App</h1>
+        <p class="lead">Sudoku is a logic-based number placement puzzle.</p>
+        <hr class="my-4">
+        <p>Fill the grid so that each column, each row, and each of the nine 3x3 sub-grids that compose the grid contain all of the digits from 1 to 9.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="title-container">
+                <h2 class="text-center mb-4">Choose a Mode</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="btn btn-primary btn-lg btn-block" href="/standard-game" role="button">Standard Game Mode</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="btn btn-primary btn-lg btn-block" href="/solver" role="button">Sudoku Solver</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="title-container">
+        <h1 class="display-4">YOUR RESULTS:</h1>
+        <p class="lead">{{stats_string}}</p>
+        <hr class="my-4">
+        <p>Click play again to try to solve a new puzzle.</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="title-container">
+                <div class="row">
+                    <a class="btn btn-primary btn-lg btn-block" href="/standard-game" role="button">Play again</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+{% endblock %}

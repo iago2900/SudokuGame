@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="title-container">
+        <h1 class="display-4">Sudoku</h1>
+        <p class="lead">Try to solve the puzzle!</p>
+        <hr class="my-4">
+        <p>Fill the empty cells with the correct number.</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="title-container">
+                <form action="/check" class="center" method="post">
+                    <div class="col-md-offset-3">
+                        <table id="grid" class="center">
+                            {% for i in range(9) %}
+                            <tr> 
+                                {% for j in range(9) %}
+                                    {% if board[i,j] == 0 %}
+                                    <td><input id="cell-{{ i*9 + j }}" name="cell-{{ i*9 + j }}" type="number"></td>
+                                    {% else %}
+                                    <td><input id="cell-{{ i*9 + j }}" name="cell-{{ i*9 + j }}" type="number" value="{{ board[i,j] }}" disabled></input></td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <br>
+                    <div class="col-md-offset-3">
+                        <button class="btn btn-primary btn-lg btn-block center" type="submit">Check</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>  
+</div>
+
+{% endblock %}
