@@ -18,7 +18,7 @@
                             <tr> 
                                 {% for j in range(9) %}
                                     {% if board[i,j] == 0 %}
-                                    <td><input id="cell-{{ i*9 + j }}" name="cell-{{ i*9 + j }}" type="number"></td>
+                                    <td><input id="cell-{{ i*9 + j }}" name="cell-{{ i*9 + j }}" type="number" min="1" max="9"></td>
                                     {% else %}
                                     <td><input id="cell-{{ i*9 + j }}" name="cell-{{ i*9 + j }}" type="number" value="{{ board[i,j] }}" disabled></input></td>
                                     {% endif %}
