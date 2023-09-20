@@ -1,5 +1,4 @@
 venv/
 test*
 TODO*
-data/
 __pycache__/
