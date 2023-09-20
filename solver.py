@@ -95,8 +95,4 @@ def solve(board_init):
         else:
             print(' ', str(zeroes_remaining), ' zeroes left\n')
     
-    if zeroes_remaining > 0:
-
-        return False
-    
-    return board_play
+    return board_play, zeroes_remaining

@@ -45,10 +45,10 @@ def solution():
                 except ValueError:
                     board_init[i,j] = 0 # deals with empty spaces
 
-        final = solve(board_init)
+        final, zeroes_remaining = solve(board_init)
 
         # render error template if the puzzle wasn't solved in 100 iterations
-        if final == False:
+        if zeroes_remaining > 0:
             return render_template("error.html", error_string="Could not find the solution to the puzzle:(")
 
     return render_template("result.html", final=final)
